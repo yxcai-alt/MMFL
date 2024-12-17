@@ -1,4 +1,5 @@
 # MMFL
+The model code has been uploaded.
 The main.py will be published later.
 ##  Dataset
 The repository for the dataset is [here](https://github.com/yxcai-alt/MultimodalDataset).
