@@ -64,7 +64,7 @@ if __name__ == '__main__':
     Save_Model = False
     CALR = True
     weight_decay = 0.0009  
-    EPOCH = 1000  
+    EPOCH = 500  
 
     Shuffle = True
     n_splits = 10
