@@ -12,6 +12,7 @@ from utils import get_data, get_auc
 import argparse
 import string
 
+os.environ["CUDA_VISIBLE_DEVICES"] = "5"
 
 def SET_Random(seed):
     """Set the seed for reproducibility"""
@@ -44,7 +45,7 @@ if __name__ == '__main__':
 
      ABIDE ABIDE-5
 
-     NC_ASD   python main.py --dataset ABIDE --task NC_ASD
+     NC_ASD   python main.py --dataset ABIDE-5 --task NC_ASD
      '''
 
     parser = argparse.ArgumentParser(description='Process some parameters.')
@@ -64,7 +65,7 @@ if __name__ == '__main__':
     Save_Model = False
     CALR = True
     weight_decay = 0.0009  
-    EPOCH = 500  
+    EPOCH = 1000  
 
     Shuffle = True
     n_splits = 10
@@ -105,8 +106,8 @@ if __name__ == '__main__':
 
     elif DATA_SET == 'ABIDE-5':
         print(f'Choose {DATA_SET} Dataset Task {Task}')
-        Feature_Data_path = os.path.join(Root_path, 'DATASET/ABIDE/ABIDE_processed_data_modal.csv')
-        Feature_dict_path = os.path.join(Root_path, 'DATASET/ABIDE/ABIDE_modal_feat_dict.npy')
+        Feature_Data_path = os.path.join(Root_path, 'DATASET/ABIDE-5/ABIDE_processed_data_modal.csv')
+        Feature_dict_path = os.path.join(Root_path, 'DATASET/ABIDE-5/ABIDE_modal_feat_dict.npy')
 
     else:
         print(f'Choose {DATA_SET} Dataset Task {Task}')
